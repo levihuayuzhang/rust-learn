@@ -1,3 +1,33 @@
+cargo-features = ["profile-rustflags"]
+
 [workspace]
+members = ["the-book-practices/*", "rustlings"]
+# exclude = ["rustlings"]
 resolver = "3"
-members = ["the-book-practices/*"]
+
+[profile.dev]
+opt-level = 0
+debug = true
+# strip = "none"
+debug-assertions = true
+overflow-checks = true
+lto = false
+# panic = 'unwind'
+incremental = true
+codegen-units = 256 # The default is 256 for incremental builds, and 16 for non-incremental builds.
+# rpath = false
+
+[profile.release]
+opt-level = 3
+debug = false
+# strip = "none"
+debug-assertions = false
+overflow-checks = false
+lto = true
+# panic = 'unwind'
+incremental = false
+codegen-units = 16
+# rpath = false
+
+[profile.release.package."*"]
+rustflags = ["-Ctarget-cpu=native"]

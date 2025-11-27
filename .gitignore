@@ -1,6 +1,11 @@
 .idea
-**/target/
-**/debug/
 
-**/*.rs.bk
+target
+debug
+
+*.rs.bk
 *.pdb
+
+vendor
+# vendor/*
+# !vendor/rand

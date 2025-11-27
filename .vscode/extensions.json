@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "rust-lang.rust-analyzer",
+    "vadimcn.vscode-lldb",
+    "llvm-vs-code-extensions.lldb-dap",
+    "llvm-vs-code-extensions.vscode-mlir",
+    "tamasfe.even-better-toml",
+    "ms-vscode.hexeditor",
+    "yzhang.markdown-all-in-one",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml"
+  ]
+}
