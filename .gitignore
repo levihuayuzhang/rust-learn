@@ -9,3 +9,9 @@ debug
 vendor
 # vendor/*
 # !vendor/rand
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+output.txt
