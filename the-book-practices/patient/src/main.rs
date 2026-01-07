@@ -1,6 +1,6 @@
 #![allow(dead_code, unused_variables)]
 
-use std::future::Future;
+// use std::future::Future;
 
 fn main() {
     println!("Hello, world!");
@@ -13,11 +13,9 @@ async fn foo1() -> usize {
     0
 }
 
-fn foo2() -> impl Future<Output = usize> {
-    async {
-        println!("foo1");
-        foo1().await;
-        println!("foo2");
-        0
-    }
+async fn foo2() -> usize {
+    println!("foo1");
+    foo1().await;
+    println!("foo2");
+    0
 }

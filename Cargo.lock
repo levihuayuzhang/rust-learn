@@ -65,6 +65,10 @@ name = "minigrep"
 version = "0.1.0"
 
 [[package]]
+name = "my_crate"
+version = "0.1.0"
+
+[[package]]
 name = "patient"
 version = "0.1.0"
 
