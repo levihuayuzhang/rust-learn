@@ -7,6 +7,10 @@ name = "adder"
 version = "0.1.0"
 
 [[package]]
+name = "box-practice"
+version = "0.1.0"
+
+[[package]]
 name = "branches"
 version = "0.1.0"
 
@@ -62,6 +66,10 @@ version = "0.1.0"
 
 [[package]]
 name = "minigrep"
+version = "0.1.0"
+
+[[package]]
+name = "mock_messenger"
 version = "0.1.0"
 
 [[package]]
