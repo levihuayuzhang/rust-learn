@@ -1,8 +1,7 @@
 cargo-features = ["profile-rustflags"]
 
 [workspace]
-members = ["the-book-practices/*", "rustlings"]
-# exclude = ["rustlings"]
+members = ["the-book-practices/*", "pancakes", "rustlings"]
 resolver = "3"
 
 [profile.dev]

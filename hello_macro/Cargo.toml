@@ -1,0 +1,10 @@
+# [workspace]
+# members = ["hello_macro_derive", "pancakes"]
+# resolver = "3"
+
+[package]
+name = "hello_macro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
