@@ -6,7 +6,7 @@ use std::fs;
 use std::process;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    // let args: Vec<String> = env::args().collect();
     // dbg!(args);
 
     let config = Config::build(env::args()).unwrap_or_else(|err| {
