@@ -1,7 +1,14 @@
 cargo-features = ["profile-rustflags"]
 
 [workspace]
-members = ["the-book-practices/*", "pancakes", "rustlings"]
+members = [
+    "the-book-practices/*",
+    "pancakes",
+    "rustlings",
+    "tutorials/async-tutorial/*",
+    "tutorials/thread-tutorial/*",
+    "rustonomicon/*",
+]
 resolver = "3"
 
 [profile.dev]
