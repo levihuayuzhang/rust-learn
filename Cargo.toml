@@ -7,7 +7,8 @@ members = [
     "rustlings",
     "tutorials/async-tutorial/*",
     "tutorials/thread-tutorial/*",
-    "rustonomicon/*", "lists",
+    "rustonomicon/*",
+    "learning-rust-with-entirely-too-many-linked-lists/*",
 ]
 resolver = "3"
 
