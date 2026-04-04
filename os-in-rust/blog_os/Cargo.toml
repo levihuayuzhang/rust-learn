@@ -1,9 +1,18 @@
+# https://os.phil-opp.com/
+
 [package]
 name = "blog_os"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+bootloader = "0.9"
+volatile = "0.2.6"
+spin = "0.5.2"
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
 
 [profile.dev]
 panic = "abort"
@@ -15,3 +24,14 @@ panic = "abort"
 name = "blog_os"
 test = false
 bench = false
+
+# # https://github.com/rust-osdev/bootimage?tab=readme-ov-file#configuration
+# [package.metadata.bootimage]
+# # The command invoked with the created bootimage (the "{}" will be replaced
+# # with the path to the bootable disk image)
+# # Applies to `bootimage run` and `bootimage runner`
+# run-command = [
+#     "qemu-system-x86_64",
+#     "-drive",
+#     "format=raw,file=target/x86_64-blog_os/debug/bootimage-blog_os.bin",
+# ]
