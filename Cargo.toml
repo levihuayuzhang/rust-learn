@@ -8,7 +8,8 @@ members = [
     "tutorials/async-tutorial/*",
     "tutorials/thread-tutorial/*",
     "rustonomicon/*",
-    "learning-rust-with-entirely-too-many-linked-lists/*", "iced-editor",
+    "learn-lists/*",
+    "iced-editor",
 ]
 exclude = ["os-in-rust/blog_os"]
 resolver = "3"
