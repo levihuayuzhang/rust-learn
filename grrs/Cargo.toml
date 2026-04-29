@@ -1,0 +1,9 @@
+# https://rust-cli.github.io/book/index.html
+[package]
+name = "grrs"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+anyhow = "1.0"
