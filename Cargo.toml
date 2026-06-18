@@ -9,7 +9,9 @@ members = [
     "tutorials/thread-tutorial/*",
     "rustonomicon/*",
     "learn-lists/*",
-    "iced-editor", "grrs",
+    "iced-editor",
+    "grrs",
+    "crust-of-rust/*",
 ]
 exclude = ["os-in-rust/blog_os"]
 resolver = "3"

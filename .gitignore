@@ -16,3 +16,5 @@ vendor
 
 output.txt
 .DS_Store
+
+Cargo.lock
