@@ -11,7 +11,7 @@ members = [
     "learn-lists/*",
     "iced-editor",
     "grrs",
-    "crust-of-rust/*",
+    "crust-of-rust/*", "trust",
 ]
 exclude = ["os-in-rust/blog_os"]
 resolver = "3"
