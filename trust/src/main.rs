@@ -3,7 +3,7 @@ use std::{io, thread};
 
 fn main() -> io::Result<()> {
     let mut i = trust::Interface::new()?;
-    let mut l = i.bind(7000)?;
+    let mut l = i.bind(8000)?;
     let jh = thread::spawn(move || {
         while let Ok(mut stream) = l.accept() {
             eprintln!("got connection!");
