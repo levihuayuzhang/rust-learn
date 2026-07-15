@@ -105,7 +105,7 @@ fn packet_loop(mut nic: tun_tap::Iface, ih: InterfaceHandle) -> io::Result<()> {
                             Entry::Vacant(e) => {
                                 if let Some(pending) = cm.pending.get_mut(&tcph.destination_port())
                                 {
-                                    if let Some(mut c) = tcp::Connection::accept(
+                                    if let Some(c) = tcp::Connection::accept(
                                         &mut nic,
                                         iph,
                                         tcph,
@@ -242,10 +242,10 @@ impl Read for TcpStream {
                 let mut nread = 0;
                 let (head, tail) = c.incoming.as_slices();
                 let hread = std::cmp::min(buf.len(), head.len());
-                buf.copy_from_slice(&head[..hread]);
+                buf[..hread].copy_from_slice(&head[..hread]);
                 nread += hread;
                 let tread = std::cmp::min(buf.len() - nread, tail.len());
-                buf.copy_from_slice(&tail[..tread]);
+                buf[hread..(hread + tread)].copy_from_slice(&tail[..tread]);
                 nread += tread;
                 drop(c.incoming.drain(..nread));
                 return Ok(nread);

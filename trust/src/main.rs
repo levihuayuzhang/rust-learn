@@ -6,11 +6,19 @@ fn main() -> io::Result<()> {
     let mut l = i.bind(8000)?;
     let jh = thread::spawn(move || {
         while let Ok(mut stream) = l.accept() {
-            eprintln!("got connection!");
+            loop {
+                let mut buf = [0; 512];
+                eprintln!("got connection!");
 
-            let n = stream.read(&mut [0]).unwrap();
-            eprintln!("read data");
-            assert_eq!(n, 0);
+                let n = stream.read(&mut buf[..]).unwrap();
+                eprintln!("read {}b of data", n);
+                if n == 0 {
+                    eprintln!("no more data");
+                    break;
+                } else {
+                    println!("{}", std::str::from_utf8(&buf[..n]).unwrap());
+                }
+            }
         }
     });
 
