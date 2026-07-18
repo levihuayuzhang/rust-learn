@@ -6,12 +6,17 @@ fn main() -> io::Result<()> {
     let mut l = i.bind(8000)?;
     let jh = thread::spawn(move || {
         while let Ok(mut stream) = l.accept() {
+            eprintln!("got connection!");
+
+            stream.write(b"hello").unwrap();
+            stream.shutdown(std::net::Shutdown::Write).unwrap();
+
             loop {
                 let mut buf = [0; 512];
-                eprintln!("got connection!");
 
                 let n = stream.read(&mut buf[..]).unwrap();
                 eprintln!("read {}b of data", n);
+
                 if n == 0 {
                     eprintln!("no more data");
                     break;
