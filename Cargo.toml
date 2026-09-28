@@ -12,7 +12,7 @@ members = [
     "iced-editor",
     "grrs",
     "crust-of-rust/*",
-    "trust",
+    "trust", "taskr",
 ]
 exclude = ["os-in-rust/blog_os"]
 resolver = "3"
